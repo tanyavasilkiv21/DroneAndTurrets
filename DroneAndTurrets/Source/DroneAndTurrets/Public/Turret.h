@@ -34,7 +34,8 @@ private:
 	UHitBoxComp* HitBoxComp;
 	UPROPERTY(EditDefaultsOnly, Category = Components)
 	UHealthComponent* HealthComponent;
-
+	UPROPERTY(EditDefaultsOnly, Category = Components)
+	UStaticMeshComponent* QuestionMarkMesh;
 	UPROPERTY(EditDefaultsOnly, Category = Components)
 	TSubclassOf<AProjectile> ProjectileClass;
 	

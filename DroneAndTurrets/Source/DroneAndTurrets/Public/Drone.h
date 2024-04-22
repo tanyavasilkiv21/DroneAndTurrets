@@ -51,7 +51,7 @@ private:
 	
 	UPROPERTY(EditDefaultsOnly, Category = Projectiles)
 	TSubclassOf<AProjectile> ProjectileClass;
-	
+
 	void Move(const FInputActionValue& Value);
 	void Look(const FInputActionValue& Value);
 	void Shoot();

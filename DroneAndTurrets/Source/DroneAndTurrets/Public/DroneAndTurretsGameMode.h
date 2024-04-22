@@ -17,6 +17,7 @@ protected:
 	virtual void BeginPlay() override;
 	
 public:
+	ADroneAndTurretsGameMode();
 	virtual void Tick(float DeltaSeconds) override;
 	UFUNCTION(BlueprintImplementableEvent)
 	void GameOver(bool bWonGame);

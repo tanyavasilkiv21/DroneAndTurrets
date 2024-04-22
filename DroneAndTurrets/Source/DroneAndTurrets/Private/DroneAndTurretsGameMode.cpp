@@ -11,11 +11,18 @@ void ADroneAndTurretsGameMode::BeginPlay()
 {
 	Super::BeginPlay();
 	TurretsOnLevel = CounterOfTurrets();
+	GameStart();
+}
+
+ADroneAndTurretsGameMode::ADroneAndTurretsGameMode()
+{
+	PrimaryActorTick.bCanEverTick = true;
 }
 
 void ADroneAndTurretsGameMode::Tick(float DeltaSeconds)
 {
 	Super::Tick(DeltaSeconds);
+	UE_LOG(LogTemp, Warning, TEXT("TurretsOnLevel: %d"), TurretsOnLevel);
 	if(TurretsOnLevel == 0)
 	{
 		GameOver(true);

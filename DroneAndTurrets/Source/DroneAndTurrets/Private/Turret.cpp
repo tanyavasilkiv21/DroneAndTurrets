@@ -23,6 +23,8 @@ ATurret::ATurret()
 	StartPointForShoot->SetupAttachment(TurretPushkaMesh);
 	HitBoxComp = CreateDefaultSubobject<UHitBoxComp>(TEXT("HitBoxComp"));
 	HitBoxComp->SetupAttachment(TurretPushkaMesh);
+	QuestionMarkMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("QuestionMark"));
+	QuestionMarkMesh->SetupAttachment(TurretPushkaMesh);
 	
 	HealthComponent = CreateDefaultSubobject<UHealthComponent>(TEXT("Health Comp"));
 }
@@ -32,7 +34,7 @@ void ATurret::BeginPlay()
 {
 	Super::BeginPlay();
 	Player = Cast<ADrone>(UGameplayStatics::GetPlayerPawn(this, 0));
-
+	QuestionMarkMesh->SetHiddenInGame(true);
 	GetWorldTimerManager().SetTimer(FireRateTimeHandle, this, &ATurret::Shoot, FireRate, true);
 }
 
@@ -48,7 +50,7 @@ bool ATurret::InFireRange()
 			FHitResult HitResult;
 			FCollisionQueryParams CollisionParams;
 			CollisionParams.AddIgnoredActor(this);
-			
+			QuestionMarkMesh->SetHiddenInGame(false);
 			//DrawDebugLine(GetWorld(), Start, End, FColor::Black, true);
 			
 			if (GetWorld()->LineTraceSingleByChannel(HitResult, Start, End, ECC_Visibility, CollisionParams))
@@ -61,6 +63,7 @@ bool ATurret::InFireRange()
 				}
 			}		
 		}
+		QuestionMarkMesh->SetHiddenInGame(true);
 	}
 	return false;
 }

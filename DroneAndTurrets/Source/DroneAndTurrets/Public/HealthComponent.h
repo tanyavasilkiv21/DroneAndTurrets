@@ -35,4 +35,5 @@ public:
 	void ApplyDamage(float DataDamage);
 	void HealDamage(float DataHeal);
 	float GetHP();
+	float GetMaxHP();
 };

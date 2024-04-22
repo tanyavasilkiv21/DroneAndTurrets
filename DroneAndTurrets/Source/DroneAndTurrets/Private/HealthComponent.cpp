@@ -62,3 +62,8 @@ float UHealthComponent::GetHP()
 	return CurrentHP;
 }
 
+float UHealthComponent::GetMaxHP()
+{
+	return MaxHP;
+}
+

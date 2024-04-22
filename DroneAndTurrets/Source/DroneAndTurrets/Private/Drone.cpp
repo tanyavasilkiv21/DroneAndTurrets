@@ -75,7 +75,6 @@ void ADrone::Shoot()
 void ADrone::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-	UE_LOG(LogTemp, Warning, TEXT("hp: %f"), HealthComponent->GetHP());
 }
 
 // Called to bind functionality to input
