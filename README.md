@@ -7,7 +7,7 @@
 - A - left
 - left shift - fly up
 - left ctrl - fly down
-- 
+
 Game Example
 
 ![](Media/gameplay_example.png)
