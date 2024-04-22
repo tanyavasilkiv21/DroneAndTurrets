@@ -7,6 +7,8 @@
 - A - left
 - left shift - fly up
 - left ctrl - fly down
+### Shoot key
+- left mouse button
 ### Goal the game 
 Destroy all turrets at the level. 
 ### Restore Actors
