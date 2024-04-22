@@ -7,6 +7,7 @@
 - A - left
 - left shift - fly up
 - left ctrl - fly down
+- 
 Game Example
 
 ![](Media/gameplay_example.png)
@@ -26,6 +27,7 @@ Destroy all turrets at the level.
 
 ### Enemy
 Turret.
+
 They can shoot in you!
 
 ![](Media/turret.png)
